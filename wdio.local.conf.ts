@@ -1,4 +1,4 @@
-const { config } = require('./wdio.shared.conf.ts')
+import { config } from './wdio.shared.conf';
 
 exports.config = {
   /**
@@ -17,12 +17,12 @@ exports.config = {
       'goog:chromeOptions': {
         args: process.argv.includes('--headless')
           ? ['--headless', '--disable-gpu']
-          : []
-      }
+          : [],
+      },
     },
     {
       browserName: 'firefox',
-      acceptInsecureCerts: true
-    }
-  ]
-}
+      acceptInsecureCerts: true,
+    },
+  ],
+};

@@ -123,13 +123,20 @@
         >
       </li>
     </ul>
+    <h3>Register</h3>
+    <RegisterForm></RegisterForm>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import RegisterForm from '@/data-modules/user/adapter/ui/component/RegisterForm.vue';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  components: {
+    RegisterForm,
+  },
+})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 }

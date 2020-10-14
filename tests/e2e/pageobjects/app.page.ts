@@ -3,13 +3,13 @@ class App {
    * elements
    */
   get heading() {
-    return $("h1");
+    return $('h1');
   }
 
   /**
    * methods
    */
-  open(path = "/") {
+  open(path = '/') {
     browser.url(path);
   }
 }

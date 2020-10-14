@@ -30,3 +30,19 @@
   }
 }
 </style>
+
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+import { configAdapter } from './layer-modules/config/adapter';
+import { CONFIG_ADAPTER_TYPES } from './layer-modules/config/adapter/types';
+
+@Component({
+  name: 'App',
+  // Provides IoC container at the top level of VueComponent
+  provide: {
+    [CONFIG_ADAPTER_TYPES.CONTAINER]: configAdapter.container,
+  },
+})
+export default class App extends Vue {}
+</script>

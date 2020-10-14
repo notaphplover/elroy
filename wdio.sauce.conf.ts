@@ -1,4 +1,5 @@
-import { config } from './wdio.shared.conf.ts';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { config } = require('./wdio.shared.conf.ts');
 
 const BUILD_ID = Math.ceil(Date.now() / 1000);
 
